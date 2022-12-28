@@ -58,6 +58,9 @@ if(key==='j'){
   if(d62===1||d62===6){
     vroll=1
   }
+  if(rd===1){
+      dc=dc+1
+    }
     lc1=45
     lc2=65
     lc3=240
@@ -94,6 +97,9 @@ function mouseClicked(){
     d61=floor(random(1,6))
     d62 = floor(random(1,6))
     dtext=1
+    if(d62===1||d62===6){
+    vroll=1
+  }
     if(rd===1){
       dc=dc+1
     }
