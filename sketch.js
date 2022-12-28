@@ -13,6 +13,7 @@ let dc=0
 let sx
 let dtext
 let vtext
+let vroll=0
 function setup() {
   
   createCanvas(windowWidth, windowHeight);
@@ -54,6 +55,9 @@ if(key==='j'){
     dtext=1
     d61=floor(random(1,6))
     d62 = floor(random(1,6))
+  if(d62===1||d62===6){
+    vroll=1
+  }
     lc1=45
     lc2=65
     lc3=240
@@ -140,6 +144,9 @@ if(dtext===1){
   fill(255)
   noStroke()
   textSize(windowHeight/25)
+  if(vroll===1){
+    text("Ding, Dong! You rolled a clock and a "+d61+"! Press that half of the screen or press j to spin it.",5,windowHeight/5*4+5,windowWidth-5,windowHeight)
+  }
       if(d61!==d62){
     text("You roll "+d61+" and "+d62+"! Move "+ (d61+d62)+" spaces!",5,windowHeight/5*4+5,windowWidth-5,windowHeight)
         dc=0
