@@ -90,6 +90,9 @@ function mouseClicked(){
     d61=floor(random(1,6))
     d62 = floor(random(1,6))
     dtext=1
+    if(rd===1){
+      dc=dc+1
+    }
     lc1=45
     lc2=65
     lc3=240
@@ -140,12 +143,15 @@ if(dtext===1){
       if(d61!==d62){
     text("You roll "+d61+" and "+d62+"! Move "+ (d61+d62)+" spaces!",5,windowHeight/5*4+5,windowWidth-5,windowHeight)
         dc=0
+        rd=0
       }else{
         if(dc===3){
           text("Uh-oh!You roll a "+d61+" and a "+d62+"! Go to jail. Do not pass go. Do not collect $200.",5,windowHeight/5*4+5,windowWidth-5,windowHeight)
+          rd=0
+          dc=0
         }else{
         text("You roll "+d61+" and "+d62+". Doubles! Move "+ (d61+d62)+" spaces!",5,windowHeight/5*4+5,windowWidth-5,windowHeight)
-        dc=dc+1
+        rd=1
         }
         }
 }
