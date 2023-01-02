@@ -15,7 +15,7 @@ let dtext
 let vtext
 let vroll=0
 function setup() {
-  
+  frameRate(60)
   createCanvas(windowWidth, windowHeight);
   background(0)
 }
